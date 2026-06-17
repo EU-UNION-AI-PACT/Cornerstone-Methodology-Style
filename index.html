@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SystemHeaven Framework v3.0 - Enterprise Validation</title>
+  <meta name="description" content="Enterprise-Grade Multi-Layer Validation Framework powered by the Cornerstone Philosophy">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            slate: { 950: '#020617', 900: '#0f172a', 800: '#1e293b', 700: '#334155' },
+            emerald: { 500: '#10b981', 600: '#059669' },
+            gold: '#eab308',
+            cyan: '#06b6d4',
+            rose: '#f43f5e',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    .glass-panel {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+    }
+    .glow-gold {
+      box-shadow: 0 0 30px rgba(234, 179, 8, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased">
+  
+  <!-- Hero Section -->
+  <section class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-gold/10 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+      <!-- Logo -->
+      <div class="inline-flex items-center justify-center w-20 h-20 bg-emerald-500 rounded-3xl mb-8 glow-emerald">
+        <i class="fas fa-gem text-4xl text-white"></i>
+      </div>
+      
+      <!-- Title -->
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+        SystemHeaven
+        <span class="block text-2xl md:text-3xl font-medium text-emerald-400 mt-2">Framework v3.0</span>
+      </h1>
+      
+      <!-- Tagline -->
+      <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-4 leading-relaxed">
+        Enterprise-Grade Multi-Layer Validation Framework
+      </p>
+      
+      <!-- Cornerstone Quote -->
+      <div class="glass-panel rounded-2xl p-6 max-w-2xl mx-auto mb-10 border-l-4 border-emerald-500">
+        <p class="text-lg text-slate-200 italic">
+          „Barmherzigkeit ist der Eckstein;<br>
+          Wahrheit ihr Maßstab, Recht ihre Ordnung,<br>
+          Entwicklung ihre Frucht."
+        </p>
+        <p class="text-sm text-slate-400 mt-2">— IIOS Constitution</p>
+      </div>
+      
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <a href="https://github.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style" 
+           class="px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-semibold transition-all hover:scale-105 flex items-center gap-3 glow-emerald">
+          <i class="fab fa-github text-xl"></i>
+          GitHub Repository
+        </a>
+        <a href="#dashboards" 
+           class="px-8 py-4 bg-slate-700 hover:bg-slate-600 text-white rounded-2xl font-semibold transition-all hover:scale-105 flex items-center gap-3 border border-slate-600">
+          <i class="fas fa-chart-line text-xl"></i>
+          Live Dashboards
+        </a>
+      </div>
+      
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div class="glass-panel rounded-2xl p-4 text-center">
+          <div class="text-3xl font-bold text-emerald-400">8</div>
+          <div class="text-sm text-slate-400">Architecture Layers</div>
+        </div>
+        <div class="glass-panel rounded-2xl p-4 text-center">
+          <div class="text-3xl font-bold text-gold">6</div>
+          <div class="text-sm text-slate-400">IGOS Dimensions</div>
+        </div>
+        <div class="glass-panel rounded-2xl p-4 text-center">
+          <div class="text-3xl font-bold text-cyan-400">3</div>
+          <div class="text-sm text-slate-400">Core Packages</div>
+        </div>
+        <div class="glass-panel rounded-2xl p-4 text-center">
+          <div class="text-3xl font-bold text-rose-400">1</div>
+          <div class="text-sm text-slate-400">Unshakeable Cornerstone</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <i class="fas fa-chevron-down text-2xl text-slate-500"></i>
+    </div>
+  </section>
+
+  <!-- Dashboards Section -->
+  <section id="dashboards" class="py-20 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Interactive Dashboards</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">Experience real-time validation, digital twin visualization, and secure audit tracking.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- RealTime Validation -->
+        <a href="./3-DeepDrive-Gigant/templates/RealTime_Validation_Dashboard.html" 
+           class="glass-panel rounded-3xl p-8 hover:bg-slate-800/80 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-500/30 transition">
+            <i class="fas fa-chart-radar text-3xl text-emerald-500"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">RealTime Validation</h3>
+          <p class="text-slate-400 mb-4">Live IGOS scoring with 6-dimensional radar chart. Track Cornerstone, Integrity, Compliance, Risk, Governance, and Development scores in real-time.</p>
+          <div class="flex items-center gap-2 text-emerald-400 font-medium">
+            <span>Open Dashboard</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-2 transition"></i>
+          </div>
+        </a>
+        
+        <!-- Digital Twin -->
+        <a href="./3-DeepDrive-Gigant/templates/Digital_Twin_Dashboard_16x9.html" 
+           class="glass-panel rounded-3xl p-8 hover:bg-slate-800/80 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/30 transition">
+            <i class="fas fa-cube text-3xl text-cyan-500"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Digital Twin</h3>
+          <p class="text-slate-400 mb-4">Visual 8-Layer Architecture twin with system health timeline. Monitor all layers from Cornerstone to Continuous Improvement.</p>
+          <div class="flex items-center gap-2 text-cyan-400 font-medium">
+            <span>Open Dashboard</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-2 transition"></i>
+          </div>
+        </a>
+        
+        <!-- Secure Audit -->
+        <a href="./3-DeepDrive-Gigant/templates/Secure_Audit_Dashboard.html" 
+           class="glass-panel rounded-3xl p-8 hover:bg-slate-800/80 transition-all duration-300 group">
+          <div class="w-16 h-16 bg-rose-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-rose-500/30 transition">
+            <i class="fas fa-shield-alt text-3xl text-rose-500"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Secure Audit</h3>
+          <p class="text-slate-400 mb-4">Real-time audit logging with compliance tracking. Security status, vulnerability scans, and GOLD certification display.</p>
+          <div class="flex items-center gap-2 text-rose-400 font-medium">
+            <span>Open Dashboard</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-2 transition"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Section -->
+  <section class="py-20 bg-slate-950">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">One-Line Installation</h2>
+      <p class="text-slate-400 mb-8">Get started with SystemHeaven in less than 30 seconds.</p>
+      
+      <div class="glass-panel rounded-2xl p-6 mb-8 text-left">
+        <div class="flex items-center gap-4 mb-4">
+          <i class="fab fa-linux text-2xl text-slate-400"></i>
+          <span class="text-slate-400">Linux & macOS</span>
+        </div>
+        <code class="block bg-slate-900 rounded-xl p-4 text-emerald-400 font-mono text-sm overflow-x-auto">
+          curl -sSL https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py | python3
+        </code>
+      </div>
+      
+      <div class="glass-panel rounded-2xl p-6 text-left">
+        <div class="flex items-center gap-4 mb-4">
+          <i class="fab fa-windows text-2xl text-slate-400"></i>
+          <span class="text-slate-400">Windows (PowerShell)</span>
+        </div>
+        <code class="block bg-slate-900 rounded-xl p-4 text-blue-400 font-mono text-sm overflow-x-auto">
+          Invoke-WebRequest -Uri "https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py" -OutFile "systemheaven.py"; python systemheaven.py
+        </code>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-emerald-500 rounded-xl flex items-center justify-center">
+            <i class="fas fa-gem text-white"></i>
+          </div>
+          <span class="text-white font-semibold">SystemHeaven</span>
+        </div>
+        
+        <div class="flex items-center gap-6 text-slate-400">
+          <a href="https://github.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style" class="hover:text-emerald-400 transition">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+          <span class="text-sm">v3.0.0 • IIOS Framework</span>
+        </div>
+      </div>
+      
+      <div class="mt-8 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>Enterprise-Grade Multi-Layer Validation Framework powered by the Cornerstone Philosophy.</p>
+        <p class="mt-2">Licensed under IIOS Constitution License</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Add scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    });
+    
+    document.querySelectorAll('.glass-panel').forEach((el) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
