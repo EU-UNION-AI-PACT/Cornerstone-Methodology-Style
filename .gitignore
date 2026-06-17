@@ -11,7 +11,9 @@ token
 
 # Netlify Tokens and Secrets
 Netlify Token
+Netlify Deployment Token
 netlify_token
+netlify_deployment_token
 .netlify
 tokens/
 
