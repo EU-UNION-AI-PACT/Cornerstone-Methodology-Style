@@ -1,0 +1,57 @@
+# Netlify Configuration for SystemHeaven Framework
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # No build command needed - static site
+  publish = "."
+
+# Redirects and headers
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/dashboard"
+  to = "/3-DeepDrive-Gigant/templates/RealTime_Validation_Dashboard.html"
+  status = 301
+
+[[redirects]]
+  from = "/validation"
+  to = "/3-DeepDrive-Gigant/templates/RealTime_Validation_Dashboard.html"
+  status = 301
+
+[[redirects]]
+  from = "/twin"
+  to = "/3-DeepDrive-Gigant/templates/Digital_Twin_Dashboard_16x9.html"
+  status = 301
+
+[[redirects]]
+  from = "/audit"
+  to = "/3-DeepDrive-Gigant/templates/Secure_Audit_Dashboard.html"
+  status = 301
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
