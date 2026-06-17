@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Audit Dashboard • SystemHeaven v3.0</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: { slate: { 950: '#020617', 900: '#0f172a', 800: '#1e293b' }, emerald: { 500: '#10b981' }, gold: '#eab308', rose: '#f43f5e', amber: '#f59e0b' } } }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    .security-badge { animation: glow 2s ease-in-out infinite alternate; }
+    @keyframes glow { from { box-shadow: 0 0 10px rgba(16, 185, 129, 0.5); } to { box-shadow: 0 0 20px rgba(16, 185, 129, 0.8); } }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+  <header class="glass-panel sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-rose-500 rounded-2xl flex items-center justify-center text-2xl security-badge">
+            <i class="fas fa-shield-alt text-white"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold text-white">SystemHeaven</h1>
+            <p class="text-sm text-rose-400">Secure Audit Dashboard v3.0</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2 bg-emerald-500/20 px-4 py-2 rounded-full border border-emerald-500/50">
+            <i class="fas fa-check-circle text-emerald-500"></i>
+            <span class="text-sm text-emerald-400 font-medium">SECURE</span>
+          </div>
+          <button onclick="runAudit()" class="px-4 py-2 bg-rose-600 hover:bg-rose-500 rounded-xl transition flex items-center gap-2">
+            <i class="fas fa-play"></i><span class="text-sm">Audit</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-8">
+    <!-- Security Overview -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div class="glass-panel rounded-2xl p-5 border-l-4 border-emerald-500">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs text-emerald-400 font-medium">SICHERHEIT</span>
+          <i class="fas fa-shield-alt text-emerald-500"></i>
+        </div>
+        <div class="text-3xl font-bold text-white">98%</div>
+        <div class="text-sm text-emerald-400">Keine Bedrohungen</div>
+      </div>
+      <div class="glass-panel rounded-2xl p-5 border-l-4 border-gold">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs text-gold font-medium">LETZTER SCAN</span>
+          <i class="fas fa-clock text-gold"></i>
+        </div>
+        <div class="text-3xl font-bold text-white">2m</div>
+        <div class="text-sm text-gold">vor 2 Minuten</div>
+      </div>
+      <div class="glass-panel rounded-2xl p-5 border-l-4 border-amber-500">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs text-amber-400 font-medium">WARNUNGEN</span>
+          <i class="fas fa-exclamation-triangle text-amber-500"></i>
+        </div>
+        <div class="text-3xl font-bold text-white">2</div>
+        <div class="text-sm text-amber-400">Niedriges Risiko</div>
+      </div>
+      <div class="glass-panel rounded-2xl p-5 border-l-4 border-rose-500">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-xs text-rose-400 font-medium">KRITISCH</span>
+          <i class="fas fa-bug text-rose-500"></i>
+        </div>
+        <div class="text-3xl font-bold text-white">0</div>
+        <div class="text-sm text-rose-400">Alles OK</div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Audit Log -->
+      <div class="lg:col-span-7 glass-panel rounded-3xl p-6">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-list-alt text-rose-500"></i>
+          Echtzeit Audit-Log
+        </h3>
+        <div class="bg-slate-900 rounded-xl p-4 h-96 overflow-y-auto font-mono text-sm">
+          <div class="space-y-2" id="log-entries">
+            <div class="flex items-start gap-3 text-emerald-400"><span class="text-slate-500">[06:23:01]</span><span>✓ Layer 0: Cornerstone validiert (94/100)</span></div>
+            <div class="flex items-start gap-3 text-emerald-400"><span class="text-slate-500">[06:23:02]</span><span>✓ Layer 1: Constitution geprüft (7 Artikel OK)</span></div>
+            <div class="flex items-start gap-3 text-emerald-400"><span class="text-slate-500">[06:23:03]</span><span>✓ Layer 2: Principles alignment bestätigt</span></div>
+            <div class="flex items-start gap-3 text-emerald-400"><span class="text-slate-500">[06:23:04]</span><span>✓ Layer 3: Governance Rollen verifiziert</span></div>
+            <div class="flex items-start gap-3 text-amber-400"><span class="text-slate-500">[06:23:05]</span><span>⚠ Layer 4: Minor update verfügbar</span></div>
+            <div class="flex items-start gap-3 text-emerald-400"><span class="text-slate-500">[06:23:06]</span><span>✓ Layer 5: Implementation stabil</span></div>
+            <div class="flex items-start gap-3 text-emerald-400"><span class="text-slate-500">[06:23:07]</span><span>✓ Layer 6: Audit Trail vollständig</span></div>
+            <div class="flex items-start gap-3 text-emerald-400"><span class="text-slate-500">[06:23:08]</span><span>✓ Layer 7: Improvement Zyklen aktiv</span></div>
+            <div class="flex items-start gap-3 text-gold mt-4 border-t border-slate-700 pt-2"><span class="text-slate-500">[06:23:09]</span><span>★ IGOS Gesamtscore: 92.4/100 (GOLD)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Panel -->
+      <div class="lg:col-span-5 space-y-4">
+        <!-- Compliance Chart -->
+        <div class="glass-panel rounded-3xl p-6">
+          <h3 class="text-lg font-semibold text-white mb-4">Compliance Status</h3>
+          <div class="h-48"><canvas id="complianceChart"></canvas></div>
+        </div>
+
+        <!-- Security Checks -->
+        <div class="glass-panel rounded-3xl p-6">
+          <h3 class="text-lg font-semibold text-white mb-4">Sicherheits-Scan</h3>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-3 bg-emerald-500/10 rounded-xl">
+              <div class="flex items-center gap-3"><i class="fas fa-check-circle text-emerald-500"></i><span class="text-sm">Eckstein-Validierung</span></div>
+              <span class="text-emerald-400 text-sm font-medium">PASS</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-emerald-500/10 rounded-xl">
+              <div class="flex items-center gap-3"><i class="fas fa-check-circle text-emerald-500"></i><span class="text-sm">Pflichtfelder Check</span></div>
+              <span class="text-emerald-400 text-sm font-medium">PASS</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-amber-500/10 rounded-xl">
+              <div class="flex items-center gap-3"><i class="fas fa-exclamation-circle text-amber-500"></i><span class="text-sm">Template Versions</span></div>
+              <span class="text-amber-400 text-sm font-medium">UPDATE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate -->
+        <div class="glass-panel rounded-3xl p-6 text-center border border-gold/30">
+          <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-certificate text-gold text-2xl"></i>
+          </div>
+          <h3 class="text-lg font-bold text-gold mb-1">GOLD ZERTIFIZIERT</h3>
+          <p class="text-sm text-slate-400">IGOS Score: 92.4/100</p>
+          <p class="text-xs text-slate-500 mt-2">Gültig bis: 17.06.2027</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    gsap.registerPlugin();
+    
+    function animateEntry() {
+      gsap.from("header", { y: -50, opacity: 0, duration: 0.8, ease: "power3.out" });
+      gsap.from(".glass-panel", { y: 30, opacity: 0, duration: 0.6, stagger: 0.1, ease: "power2.out", delay: 0.2 });
+    }
+
+    function initComplianceChart() {
+      const ctx = document.getElementById('complianceChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Compliant', 'Warning', 'Non-Compliant'],
+          datasets: [{ data: [85, 12, 3], backgroundColor: ['#10b981', '#f59e0b', '#ef4444'], borderWidth: 0, hoverOffset: 4 }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          cutout: '65%',
+          plugins: {
+            legend: { position: 'bottom', labels: { color: '#94a3b8', usePointStyle: true, padding: 15 } }
+          }
+        }
+      });
+    }
+
+    function runAudit() {
+      gsap.to("#log-entries", { opacity: 0.5, duration: 0.2, yoyo: true, repeat: 3 });
+      setTimeout(() => {
+        const now = new Date().toLocaleTimeString('de-DE');
+        const entry = document.createElement('div');
+        entry.className = 'flex items-start gap-3 text-emerald-400';
+        entry.innerHTML = `<span class="text-slate-500">[${now}]</span><span>✓ Manueller Audit-Scan abgeschlossen</span>`;
+        document.getElementById('log-entries').prepend(entry);
+        gsap.from(entry, { x: -20, opacity: 0, duration: 0.5 });
+      }, 1000);
+    }
+
+    window.addEventListener('load', () => {
+      animateEntry();
+      initComplianceChart();
+    });
+  </script>
+</body>
+</html>
