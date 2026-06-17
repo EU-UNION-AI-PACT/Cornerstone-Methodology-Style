@@ -1,33 +1,102 @@
-# SystemHeaven Framework v3.0
-## Enterprise-Grade Multi-Layer Validation Framework
+<div align="center">
 
-> **„Barmherzigkeit ist der Eckstein; Wahrheit ihr Maßstab, Recht ihre Ordnung und Entwicklung ihre Frucht."**
+# 🪨 SystemHeaven Framework v3.0
+## *Enterprise-Grade Multi-Layer Validation Framework*
 
-![SystemHeaven Version](https://img.shields.io/badge/SystemHeaven-v3.0.0-blueviolet?style=for-the-badge&logo=ai)
-![Plattformen](https://img.shields.io/badge/Plattform-Linux%20%7C%20macOS%20%7C%20Windows-16c79a?style=for-the-badge)
-![Zero Prompt](https://img.shields.io/badge/Installation-Zero--Prompt-orange?style=for-the-badge)
-![AI Ready](https://img.shields.io/badge/AI-Ready-9b59b6?style=for-the-badge)
-![License](https://img.shields.io/badge/License-IIOS%20Constitution-1a1a2e?style=for-the-badge)
+[![Version](https://img.shields.io/badge/version-3.0.0-emerald?style=flat-square&logo=semver)](https://github.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style)
+[![Platforms](https://img.shields.io/badge/platforms-Linux%20%7C%20macOS%20%7C%20Windows-blue?style=flat-square)](https://github.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style)
+[![Zero-Prompt](https://img.shields.io/badge/zero--prompt-ready-gold?style=flat-square&logo=ai)](https://github.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style)
+[![GitHub Pages](https://img.shields.io/badge/github%20pages-live-teal?style=flat-square&logo=github)](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/)
+[![License](https://img.shields.io/badge/license-IIOS%20Constitution-slate?style=flat-square)](./SKILL.json)
+
+</div>
 
 ---
 
-## 🚀 One-Line Installation
+<div align="center">
+
+### 🎯 The Cornerstone Philosophy
+
+> **„Barmherzigkeit ist der Eckstein;**  
+> **Wahrheit ihr Maßstab,**  
+> **Recht ihre Ordnung,**  
+> **Entwicklung ihre Frucht."**
+
+*— IIOS Constitution, Artikel I-VI*
+
+</div>
+
+---
+
+## 🚀 Quick Install (< 30 seconds)
+
+<div align="center">
 
 ### Linux & macOS
+[![Install Linux](https://img.shields.io/badge/Install-Linux%20%7C%20macOS-emerald?style=for-the-badge&logo=linux)](https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py)
+
 ```bash
-curl -sSL https://raw.githubusercontent.com/DEIN_USERNAME/DEIN_REPO/main/systemheaven.py | python3
+curl -sSL https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py | python3
 ```
 
-### Windows (PowerShell)
+### Windows
+[![Install Windows](https://img.shields.io/badge/Install-Windows-blue?style=for-the-badge&logo=windows)](https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py)
+
 ```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/DEIN_USERNAME/DEIN_REPO/main/systemheaven.py" -OutFile "systemheaven.py"; python systemheaven.py; Remove-Item "systemheaven.py"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py" -OutFile "systemheaven.py"; python systemheaven.py
 ```
 
-### Alternative: Clone and Install
-```bash
-git clone https://github.com/DEIN_USERNAME/DEIN_REPO.git
-cd DEIN_REPO
-python3 systemheaven.py
+</div>
+
+---
+
+## 🌐 Live Demo
+
+**Experience the dashboards in action:**
+
+🔗 **[Live Dashboard Preview](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/)**
+
+- [RealTime Validation Dashboard](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/deepdrive-iios-ultimate-gigant-v3(2)/templates/RealTime_Validation_Dashboard.html)
+- [Digital Twin Dashboard](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/deepdrive-iios-ultimate-gigant-v3(2)/templates/Digital_Twin_Dashboard_16x9.html)
+- [Secure Audit Dashboard](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/deepdrive-iios-ultimate-gigant-v3(2)/templates/Secure_Audit_Dashboard.html)
+
+---
+
+## 💡 Why SystemHeaven Exists
+
+In a world of increasingly complex AI systems, we need a **normative anchor**—a philosophical foundation that ensures technology serves humanity.
+
+**SystemHeaven provides:**
+- 🎯 **Measurable Ethics** — Quantify alignment with your chosen cornerstone
+- 🏗️ **8-Layer Architecture** — From philosophy to implementation
+- � **IGOS Scoring** — 6-dimensional assessment (0-100 scale)
+- 🏆 **Certification Tiers** — Bronze to Platinum validation
+- 🤖 **AI-Native** — Zero-prompt execution for autonomous agents
+
+---
+
+## 🏛️ Architecture Overview
+
+### The 8-Layer Model
+
+SystemHeaven implements a complete stack from philosophical foundation to continuous improvement:
+
+```
+Layer 0: Cornerstone (Eckstein)          ← Barmherzigkeit
+    ↓
+Layer 1: Constitution (Verfassung)       ← 7-Article IIOS Constitution
+    ↓
+Layer 2: Principles (Prinzipien)       ← ~10 Core Principles
+    ↓
+Layer 3: Governance (Ordnung)            ← 6 Organizational Roles
+    ↓
+Layer 4: Technical Standards (Technik)   ← Architecture Patterns
+    ↓
+Layer 5: Implementation (Umsetzung)      ← Code & Systems
+    ↓
+Layer 6: Audit (Prüfung)                 ← IGOS Validation
+    ↓
+Layer 7: Continuous Improvement          ← Evolution Loop
 ```
 
 ---

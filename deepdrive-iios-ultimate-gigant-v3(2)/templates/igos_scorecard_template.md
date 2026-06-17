@@ -1,10 +1,34 @@
+---
+title: IGOS Scorecard Template
+project_name: [Projektname hier einfügen]
+date: [YYYY-MM-DD]
+evaluator: [Name/Organisation hier einfügen]
+version: 3.0.0
+cornerstone: [Barmherzigkeit/Gerechtigkeit/Sicherheit/etc.]
+igos_target: [Platinum/Gold/Silver/Bronze]
+category: template
+type: scorecard
+language: de
+status: draft
+framework: SystemHeaven
+scores:
+  cornerstone: 0-100
+  integrity: 0-100
+  compliance: 0-100
+  risk: 0-100
+  governance: 0-100
+  development: 0-100
+---
+
 # IGOS Scorecard Template
 
-**Projektname:** [Projektname hier einfügen]
-**Datum der Bewertung:** [Datum hier einfügen]
-**Bewertet von:** [Name/Organisation hier einfügen]
+**Projektname:** {{project_name}}  
+**Datum der Bewertung:** {{date}}  
+**Bewertet von:** {{evaluator}}  
+**Version:** {{version}}  
+**Framework:** {{framework}}
 
-## Gewählter Eckstein:
+## Gewählter Eckstein: {{cornerstone}}
 
 **[Der vom Anwender gewählte Eckstein, z.B. "Menschenwürde / Barmherzigkeit", "Zuverlässigkeit", "Sicherheit"]**
 

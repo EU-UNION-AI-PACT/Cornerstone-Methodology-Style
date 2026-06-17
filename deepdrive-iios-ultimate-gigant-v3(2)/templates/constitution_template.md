@@ -1,8 +1,26 @@
-# IIOS Constitution Template: Die Verfassung des [Systemname]
+---
+title: IIOS Constitution Template
+subtitle: Die Verfassung des [Systemname]
+author: [Autor/Organisation hier einfügen]
+date: [YYYY-MM-DD]
+system_name: [Name des zu entwickelnden Systems]
+version: 3.0.0
+cornerstone: [Barmherzigkeit/Gerechtigkeit/Sicherheit/etc.]
+igos_target: [Platinum/Gold/Silver/Bronze]
+category: template
+type: constitution
+language: de
+status: draft
+framework: SystemHeaven
+---
 
-**Autor:** [Autor/Organisation hier einfügen]
-**Datum:** [Datum hier einfügen]
-**Systemname:** [Name des zu entwickelnden Systems]
+# IIOS Constitution Template: Die Verfassung des {{system_name}}
+
+**Autor:** {{author}}  
+**Datum:** {{date}}  
+**Systemname:** {{system_name}}  
+**Version:** {{version}}  
+**Eckstein:** {{cornerstone}}
 
 ## Präambel
 

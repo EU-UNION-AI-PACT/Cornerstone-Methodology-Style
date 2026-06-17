@@ -1,27 +1,122 @@
-# SystemHeaven Framework v3.0
-## Enterprise-Grade Multi-Layer Validation Framework
+<div align="center">
 
-> **„Barmherzigkeit ist der Eckstein; Wahrheit ihr Maßstab, Recht ihre Ordnung und Entwicklung ihre Frucht."**
+# 🪨 SystemHeaven Framework v3.0
+## *Enterprise-Grade Multi-Layer Validation Framework*
+
+[![Version](https://img.shields.io/badge/version-3.0.0-emerald?style=flat-square&logo=semver)](https://github.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style)
+[![Platforms](https://img.shields.io/badge/platforms-Linux%20%7C%20macOS%20%7C%20Windows-blue?style=flat-square)](https://github.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style)
+[![Zero-Prompt](https://img.shields.io/badge/zero--prompt-ready-gold?style=flat-square&logo=ai)](https://github.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style)
+[![GitHub Pages](https://img.shields.io/badge/github%20pages-live-teal?style=flat-square&logo=github)](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/)
+[![License](https://img.shields.io/badge/license-IIOS%20Constitution-slate?style=flat-square)](./SKILL.json)
+
+</div>
 
 ---
 
-## 🚀 One-Line Installation
+<div align="center">
+
+### 🎯 The Cornerstone Philosophy
+
+> **„Barmherzigkeit ist der Eckstein;**  
+> **Wahrheit ihr Maßstab,**  
+> **Recht ihre Ordnung,**  
+> **Entwicklung ihre Frucht."**
+
+*— IIOS Constitution, Artikel I-VI*
+
+</div>
+
+---
+
+## 🚀 Quick Install (< 30 seconds)
+
+<div align="center">
 
 ### Linux & macOS
+[![Install Linux](https://img.shields.io/badge/Install-Linux%20%7C%20macOS-emerald?style=for-the-badge&logo=linux)](https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py)
+
 ```bash
-curl -sSL https://raw.githubusercontent.com/DEIN_USERNAME/DEIN_REPO/main/systemheaven.py | python3
+curl -sSL https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py | python3
 ```
 
-### Windows (PowerShell)
+### Windows
+[![Install Windows](https://img.shields.io/badge/Install-Windows-blue?style=for-the-badge&logo=windows)](https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py)
+
 ```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/DEIN_USERNAME/DEIN_REPO/main/systemheaven.py" -OutFile "systemheaven.py"; python systemheaven.py; Remove-Item "systemheaven.py"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/EU-UNION-AI-PACT/Cornerstone-Methodology-Style/main/systemheaven.py" -OutFile "systemheaven.py"; python systemheaven.py
 ```
 
-### Alternative: Clone and Install
-```bash
-git clone https://github.com/DEIN_USERNAME/DEIN_REPO.git
-cd DEIN_REPO
-python3 systemheaven.py
+</div>
+
+---
+
+## 🌐 Live Demo
+
+**Experience the dashboards in action:**
+
+🔗 **[Live Dashboard Preview](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/)**
+
+- [RealTime Validation Dashboard](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/deepdrive-iios-ultimate-gigant-v3(2)/templates/RealTime_Validation_Dashboard.html)
+- [Digital Twin Dashboard](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/deepdrive-iios-ultimate-gigant-v3(2)/templates/Digital_Twin_Dashboard_16x9.html)
+- [Secure Audit Dashboard](https://eu-union-ai-pact.github.io/Cornerstone-Methodology-Style/deepdrive-iios-ultimate-gigant-v3(2)/templates/Secure_Audit_Dashboard.html)
+
+---
+
+## 💡 Why SystemHeaven Exists
+
+In a world of increasingly complex AI systems, we need a **normative anchor**—a philosophical foundation that ensures technology serves humanity.
+
+**SystemHeaven provides:**
+- 🎯 **Measurable Ethics** — Quantify alignment with your chosen cornerstone
+- 🏗️ **8-Layer Architecture** — From philosophy to implementation
+- � **IGOS Scoring** — 6-dimensional assessment (0-100 scale)
+- 🏆 **Certification Tiers** — Bronze to Platinum validation
+- 🤖 **AI-Native** — Zero-prompt execution for autonomous agents
+
+---
+
+## 🏛️ Architecture Overview
+
+### The 8-Layer Model
+
+SystemHeaven implements a complete stack from philosophical foundation to continuous improvement:
+
+```
+Layer 0: Cornerstone (Eckstein)          ← Barmherzigkeit
+    ↓
+Layer 1: Constitution (Verfassung)       ← 7-Article IIOS Constitution
+    ↓
+Layer 2: Principles (Prinzipien)       ← ~10 Core Principles
+    ↓
+Layer 3: Governance (Ordnung)            ← 6 Organizational Roles
+    ↓
+Layer 4: Technical Standards (Technik)   ← Architecture Patterns
+    ↓
+Layer 5: Implementation (Umsetzung)      ← Code & Systems
+    ↓
+Layer 6: Audit (Prüfung)                 ← IGOS Validation
+    ↓
+Layer 7: Continuous Improvement          ← Evolution Loop
+```
+
+---
+
+## 🌐 SystemHeaven Architektur-Workflow
+
+```mermaid
+graph TD
+    A[1_Cornerstone-Methodology <br> Unverrückbares Gesetz] -->|Definiert Regeln| B(2_Strategic-Architect <br> Planungsbüro)
+    B -->|Generiert Templates| C{3_DeepDrive-Ultimate-Gigant}
+    C -->|Echtzeit-Validierung| D[RealTime Validation Dashboard]
+    C -->|Visualisierung| E[Digital Twin Dashboard]
+    C -->|Auditing| F[Secure Audit Dashboard]
+    
+    style A fill:#1a1a2e,stroke:#16c79a,stroke-width:2px,color:#fff
+    style B fill:#16c79a,stroke:#11698e,stroke-width:2px,color:#fff
+    style C fill:#11698e,stroke:#16c79a,stroke-width:2px,color:#fff
+    style D fill:#9b59b6,stroke:#fff,stroke-width:2px,color:#fff
+    style E fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
+    style F fill:#f5a623,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -30,61 +125,99 @@ python3 systemheaven.py
 
 SystemHeaven creates three integrated packages:
 
+### 📂 Interaktive Paket-Übersicht
+
+<details>
+<summary><b>🔍 1_Cornerstone-Methodology (Foundation Layer) - Klicken zum Aufklappen</b></summary>
+
+**Purpose:** Philosophical and methodological core
+
+| File | Purpose |
+|------|---------|
+| `SKILL.json` | AI Manifest - Zero-prompt execution rules |
+| `SKILL.md` | Human-readable guide |
+| `references/methodology_guide.md` | Der philosophische Eckstein |
+| `references/workflows.md` | Die exakten Scan-Abläufe |
+| `references/iios_constitution.md` | 7-Article constitution |
+| `references/glossary.md` | Precise term definitions |
+| `references/role_model.md` | 6 organizational roles |
+| `references/certification_levels.md` | Bronze→Platinum criteria |
+| `references/reference_architecture.md` | 8-Layer architecture |
+| `references/10_reference_cases.md` | Real-world examples |
+| `templates/constitution_template.md` | System constitution template |
+| `templates/igos_scorecard_template.md` | Die Audit-Schablone |
+| `templates/technical_specification_template.md` | Technical spec template |
+| `templates/governance_standard_template.md` | Governance template |
+| `templates/certification_framework_template.md` | Certification template |
+| `templates/visual_design_standard_template.md` | Visual design template |
+| `scripts/build_framework.py` | Template synchronization |
+| `scripts/dynamic_validation_engine.py` | Markdown-driven validation |
+</details>
+
+<details>
+<summary><b>🧠 2_Strategic-Architect (Governance Layer) - Klicken zum Aufklappen</b></summary>
+
+**Purpose:** Strategic architecture and decision-making
+
+| File | Purpose |
+|------|---------|
+| `SKILL.json` | AI Manifest |
+| `SKILL.md` | Human-readable guide |
+| `references/methodology_guide.md` | Die gesetzliche Verknüpfung |
+| `references/workflows.md` | Strategic workflows |
+| `references/strategic_decision_framework.md` | Decision framework |
+| `templates/strategic_plan_template.md` | Strategic plan template |
+| `templates/decision_log_template.md` | Decision log template |
+| `scripts/strategy_validator.py` | Validates strategic decisions |
+</details>
+
+<details>
+<summary><b>🚀 3_DeepDrive-IIOS-Ultimate-Gigant-v3 (Implementation Layer) - Klicken zum Aufklappen</b></summary>
+
+**Purpose:** Full IIOS Suite with dashboards and tooling
+
+| File | Purpose |
+|------|---------|
+| `SKILL.json` | AI Manifest |
+| `SKILL.md` | Human-readable guide |
+| `references/IIOS_Constitution.md` | Constitution reference |
+| `references/IIOS_Technical_Specification.md` | Technical specifications |
+| `references/IIOS_Visual_Design_Standard.md` | Visual design standard |
+| `references/IIOS_Governance_Standard.md` | Governance standard |
+| `references/IIOS_Certification_Framework.md` | Certification framework |
+| `templates/RealTime_Validation_Dashboard.html` | **Live-Frontend für Datenströme** |
+| `templates/Digital_Twin_Dashboard_16x9.html` | **Visueller digitaler Zwilling** |
+| `templates/Secure_Audit_Dashboard.html` | **Sicherheits-Audit Dashboard** |
+| `scripts/real_time_validator.py` | Real-time validation engine |
+| `scripts/score_calculator.py` | IGOS score calculator |
+| `scripts/dashboard_server.py` | Dashboard server |
+</details>
+
+---
+
+## 🌐 Live Dashboard Vorschau
+
+Die HTML-Dashboards sind über **GitHub Pages** live erlebbar:
+
+1. Gehe zu **Settings → Pages** in deinem Repository
+2. Wähle `main` Branch und `/root` als Source
+3. Speichern - Deine Dashboards sind unter `https://deinname.github.io/systemheaven/` erreichbar!
+
+🔗 **[Live Demo ansehen](https://deinname.github.io/systemheaven/)** (Nach GitHub Pages Setup)
+
+---
+
+## 📁 Architektur-Dateistruktur
+
 ```
 systemheaven/
 ├── 1_Cornerstone-Methodology/          # Foundation Layer
-│   ├── SKILL.json                       # AI Manifest
-│   ├── SKILL.md                         # Human-readable guide
-│   ├── references/                      # Documentation
-│   │   ├── methodology_guide.md
-│   │   ├── workflows.md
-│   │   ├── iios_constitution.md
-│   │   ├── glossary.md
-│   │   ├── role_model.md
-│   │   ├── certification_levels.md
-│   │   ├── reference_architecture.md
-│   │   └── 10_reference_cases.md
-│   ├── templates/                     # Templates
-│   │   ├── constitution_template.md
-│   │   ├── igos_scorecard_template.md
-│   │   ├── technical_specification_template.md
-│   │   ├── governance_standard_template.md
-│   │   ├── certification_framework_template.md
-│   │   └── visual_design_standard_template.md
-│   └── scripts/                       # Tools
-│       ├── build_framework.py
-│       └── dynamic_validation_engine.py
-│
 ├── 2_Strategic-Architect/               # Governance Layer
-│   ├── SKILL.json
-│   ├── SKILL.md
-│   ├── references/
-│   │   ├── methodology_guide.md
-│   │   ├── workflows.md
-│   │   └── strategic_decision_framework.md
-│   ├── templates/
-│   │   ├── strategic_plan_template.md
-│   │   └── decision_log_template.md
-│   └── scripts/
-│       └── strategy_validator.py
-│
 └── 3_DeepDrive-IIOS-Ultimate-Gigant-v3/ # Implementation Layer
-    ├── SKILL.json
-    ├── SKILL.md
-    ├── references/
-    │   ├── IIOS_Constitution.md
-    │   ├── IIOS_Technical_Specification.md
-    │   ├── IIOS_Visual_Design_Standard.md
-    │   ├── IIOS_Governance_Standard.md
-    │   └── IIOS_Certification_Framework.md
-    ├── templates/
-    │   ├── RealTime_Validation_Dashboard.html
-    │   ├── Digital_Twin_Dashboard_16x9.html
-    │   └── Secure_Audit_Dashboard.html
-    └── scripts/
-        ├── real_time_validator.py
-        ├── score_calculator.py
-        └── dashboard_server.py
+    └── templates/
+        ├── RealTime_Validation_Dashboard.html
+        ├── Digital_Twin_Dashboard_16x9.html
+        └── Secure_Audit_Dashboard.html
 ```
 
 ---
@@ -134,6 +267,55 @@ Layer 5: Implementation (Umsetzung)       ← Code & Systems
 Layer 6: Audit (Prüfung)                 ← Validation
     ↓
 Layer 7: Continuous Improvement          ← Evolution
+```
+
+### Visual Architecture Flow
+
+```mermaid
+flowchart TB
+    subgraph L0["Layer 0: Cornerstone"]
+        C["Barmherzigkeit<br/>(Eckstein)"]
+    end
+    
+    subgraph L1["Layer 1: Constitution"]
+        CON["7-Article Verfassung"]
+    end
+    
+    subgraph L2["Layer 2: Principles"]
+        P["~10 Core Principles"]
+    end
+    
+    subgraph L3["Layer 3: Governance"]
+        G["Roles & Ordnung"]
+    end
+    
+    subgraph L4["Layer 4: Technical Standards"]
+        T["Architecture"]
+    end
+    
+    subgraph L5["Layer 5: Implementation"]
+        I["Code & Systems"]
+    end
+    
+    subgraph L6["Layer 6: Audit"]
+        A["Validation"]
+    end
+    
+    subgraph L7["Layer 7: Improvement"]
+        IMP["Evolution"]
+    end
+    
+    C --> CON --> P --> G --> T --> I --> A --> IMP
+    IMP -.-> C
+    
+    style C fill:#e94560,stroke:#fff,stroke-width:2px,color:#fff
+    style CON fill:#1a1a2e,stroke:#16c79a,stroke-width:2px,color:#fff
+    style P fill:#11698e,stroke:#16c79a,stroke-width:2px,color:#fff
+    style G fill:#16c79a,stroke:#11698e,stroke-width:2px,color:#fff
+    style T fill:#f5a623,stroke:#fff,stroke-width:2px,color:#000
+    style I fill:#9b59b6,stroke:#fff,stroke-width:2px,color:#fff
+    style A fill:#6bcb77,stroke:#fff,stroke-width:2px,color:#000
+    style IMP fill:#4a90d9,stroke:#fff,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -280,6 +462,38 @@ python scripts/build_framework.py dashboard
 | `references/workflows_enhanced.md` | Mermaid workflow diagrams |
 | `references/llm_instruction_guide.md` | AI system prompt template |
 | `references/10_reference_cases.md` | Real-world examples |
+
+---
+
+## 🚀 Push to GitHub
+
+Wenn deine Dateien bereitstehen, pushe das Ganze mit diesen Befehlen auf GitHub:
+
+```bash
+# 1. Git initialisieren (falls noch nicht geschehen)
+git init
+
+# 2. Alle Dateien hinzufügen
+git add .
+
+# 3. Aussagekräftigen Commit erstellen
+git commit -m "Feat: Initialize SystemHeaven Framework v3 with interactive visual dashboards and automated installer"
+
+# 4. Main-Branch festlegen und mit GitHub verbinden
+git branch -M main
+git remote add origin https://github.com/DEIN_USERNAME/systemheaven.git
+
+# 5. Hochladen
+git push -u origin main
+```
+
+### GitHub Pages Aktivieren
+
+1. Gehe zu **Settings → Pages** im Repository
+2. Source: `Deploy from a branch`
+3. Branch: `main` / `/root`
+4. Klicke **Save**
+5. Füge die generierte URL unter **About → Website** ein
 
 ---
 
