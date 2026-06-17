@@ -3,11 +3,14 @@
 
 # GitHub Tokens and Secrets
 GitHub Token
+GitHub-Token
 github_token
 token
 *.token
+*.key
 .env
 .env.local
+secrets/
 
 # Netlify Tokens and Secrets
 Netlify Token
