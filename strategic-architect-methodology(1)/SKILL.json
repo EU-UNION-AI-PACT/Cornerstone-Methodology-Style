@@ -1,0 +1,77 @@
+{
+  "skill_name": "systemheaven-framework",
+  "version": "3.0.0",
+  "description": "Enterprise-Grade Multi-Layer Validation Framework powered by the Cornerstone Philosophy (Barmherzigkeit as Eckstein).",
+  "tagline": "Barmherzigkeit ist der Eckstein; Wahrheit ihr Maßstab, Recht ihre Ordnung und Entwicklung ihre Frucht.",
+  "runtime_environments": [
+    "AI-Agent",
+    "Chatbot",
+    "IDE-Extension",
+    "CLI",
+    "OS-Terminal",
+    "Container",
+    "Cloud-Function"
+  ],
+  "core_principles": {
+    "cornerstone": "Barmherzigkeit (Gnade/Mitgefühl) als unerschütterlicher Eckstein",
+    "measure": "Wahrheit als Maßstab",
+    "order": "Recht als Ordnung",
+    "foundation": "Sicherheit & Nachhaltigkeit als Fundament",
+    "goal": "Entwicklung als Ziel"
+  },
+  "execution_rules": [
+    "Jeder Daten- oder Architekturkan MUSS die Bedingungen des methodology_guide.md erfüllen.",
+    "Systementscheidungen werden anhand der igos_scorecard_template.md bewertet.",
+    "Der Code muss strikt von der Governance- und Verfassungsebene getrennt bleiben.",
+    "Pflichtfelder zur Eckstein-Validierung sind in allen Templates obligatorisch.",
+    "Scores (Cornerstone, Integrity, Compliance, Risk, Governance, Development) müssen quantifiziert werden."
+  ],
+  "architecture": {
+    "layers": 8,
+    "layer_names": [
+      "Layer 0: Cornerstone (Eckstein)",
+      "Layer 1: Constitution (Verfassung)",
+      "Layer 2: Principles (Prinzipien)",
+      "Layer 3: Governance (Ordnung)",
+      "Layer 4: Technical Standards (Technische Standards)",
+      "Layer 5: Implementation (Implementierung)",
+      "Layer 6: Audit (Prüfung)",
+      "Layer 7: Continuous Improvement (Kontinuierliche Verbesserung)"
+    ]
+  },
+  "certification_levels": {
+    "platinum": {"min_score": 95, "description": "Exzellenz"},
+    "gold": {"min_score": 90, "description": "Hervorragend"},
+    "silver": {"min_score": 80, "description": "Gut"},
+    "bronze": {"min_score": 70, "description": "Basis"}
+  },
+  "installation": {
+    "one_liner_linux": "curl -sSL https://raw.githubusercontent.com/DEIN_USERNAME/DEIN_REPO/main/systemheaven.py | python3",
+    "one_liner_windows": "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/DEIN_USERNAME/DEIN_REPO/main/systemheaven.py' -OutFile 'systemheaven.py'; python systemheaven.py; Remove-Item 'systemheaven.py'",
+    "packages": [
+      "1_Cornerstone-Methodology",
+      "2_Strategic-Architect",
+      "3_DeepDrive-IIOS-Ultimate-Gigant-v3"
+    ],
+    "critical_files": [
+      "SKILL.json",
+      "SKILL.md",
+      "references/methodology_guide.md",
+      "references/workflows.md",
+      "templates/constitution_template.md",
+      "templates/igos_scorecard_template.md"
+    ]
+  },
+  "zero_prompt_behavior": {
+    "on_load": "Read SKILL.json to understand execution context",
+    "on_request": "Apply 8-Layer Architecture validation",
+    "on_output": "Include Eckstein-Validierung Pflichtfeld",
+    "on_decision": "Calculate and report all 6 IGOS Scores"
+  },
+  "metadata": {
+    "created_at": "2026-06-17",
+    "installer_version": "3.0.0",
+    "framework_family": "IIOS",
+    "license": "IIOS Constitution License"
+  }
+}

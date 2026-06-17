@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIOS IGOS Scorecard Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e94560;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(233, 69, 96, 0.1);
+            border-radius: 16px;
+            border: 1px solid rgba(233, 69, 96, 0.3);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .motto {
+            font-style: italic;
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+        .scores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .score-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(233, 69, 96, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .score-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+        }
+        .score-card.critical { border-color: #e94560; }
+        .score-card.warning { border-color: #ffd93d; }
+        .score-card.good { border-color: #6bcb77; }
+        .score-label {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            margin-bottom: 0.5rem;
+        }
+        .score-value {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        .chart-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(233, 69, 96, 0.2);
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #e94560;
+        }
+        #radarChart { max-height: 400px; }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-pass { background: #6bcb77; }
+        .status-fail { background: #e94560; }
+        .status-warn { background: #ffd93d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IIOS IGOS Scorecard Dashboard</h1>
+            <p class="motto">"Barmherzigkeit ist der Eckstein; Wahrheit ihr Maßstab, Recht ihre Ordnung und Entwicklung ihre Frucht."</p>
+        </header>
+
+        <div class="scores-grid">
+            <div class="score-card" id="cornerstone-card">
+                <div class="score-label">Cornerstone Score</div>
+                <div class="score-value" id="cornerstone-score">--</div>
+            </div>
+            <div class="score-card" id="integrity-card">
+                <div class="score-label">Integrity Score</div>
+                <div class="score-value" id="integrity-score">--</div>
+            </div>
+            <div class="score-card" id="compliance-card">
+                <div class="score-label">Compliance Score</div>
+                <div class="score-value" id="compliance-score">--</div>
+            </div>
+            <div class="score-card" id="risk-card">
+                <div class="score-label">Risk Score</div>
+                <div class="score-value" id="risk-score">--</div>
+            </div>
+            <div class="score-card" id="governance-card">
+                <div class="score-label">Governance Score</div>
+                <div class="score-value" id="governance-score">--</div>
+            </div>
+            <div class="score-card" id="development-card">
+                <div class="score-label">Development Score</div>
+                <div class="score-value" id="development-score">--</div>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <h2 class="section-title">Score Radar Analysis</h2>
+            <canvas id="radarChart"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2 class="section-title">Certification Status</h2>
+            <div id="certification-status">
+                <p><span class="status-indicator status-warn"></span>Pending Assessment</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="radar_chart.js"></script>
+    <script>
+        // Demo data - in production, this would be loaded from the IIOS framework
+        const igosData = {
+            cornerstone: 85,
+            integrity: 92,
+            compliance: 78,
+            risk: 88,
+            governance: 81,
+            development: 75
+        };
+
+        // Update score displays
+        function updateScores(data) {
+            document.getElementById('cornerstone-score').textContent = data.cornerstone + '%';
+            document.getElementById('integrity-score').textContent = data.integrity + '%';
+            document.getElementById('compliance-score').textContent = data.compliance + '%';
+            document.getElementById('risk-score').textContent = data.risk + '%';
+            document.getElementById('governance-score').textContent = data.governance + '%';
+            document.getElementById('development-score').textContent = data.development + '%';
+
+            // Color coding
+            Object.keys(data).forEach(key => {
+                const card = document.getElementById(key + '-card');
+                const score = data[key];
+                card.classList.remove('critical', 'warning', 'good');
+                if (score < 70) card.classList.add('critical');
+                else if (score < 85) card.classList.add('warning');
+                else card.classList.add('good');
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            updateScores(igosData);
+            initRadarChart(igosData);
+        });
+    </script>
+</body>
+</html>
