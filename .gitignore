@@ -9,6 +9,12 @@ token
 .env
 .env.local
 
+# Netlify Tokens and Secrets
+Netlify Token
+netlify_token
+.netlify
+tokens/
+
 # IDE and Editor
 .vscode/
 .idea/
